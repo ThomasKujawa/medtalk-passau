@@ -644,3 +644,26 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const versionElement = document.getElementById('app-version');
+
+  if (!versionElement) {
+    return;
+  }
+
+  fetch('version.txt', { cache: 'no-store' })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('version.txt konnte nicht geladen werden');
+        }
+
+        return response.text();
+      })
+      .then((version) => {
+        versionElement.textContent = `v${version.trim()}`;
+      })
+      .catch(() => {
+        versionElement.textContent = 'dev';
+      });
+});

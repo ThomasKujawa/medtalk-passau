@@ -127,13 +127,8 @@
   <p class="intro">
     Dieses Projekt ist privat und inoffiziell. Keine Gewähr für Richtigkeit, Vollständigkeit und Aktualität. Angaben zum Impressum sind unter <a href="https://github.com/ThomasKujawa/dynamic-content-calendar/" target="_blank">https://github.com/</a> nachzulesen.
   </p>
-  <?php
-            $version = file_exists(__DIR__ . '/version.txt')
-                ? 'v' . trim(file_get_contents(__DIR__ . '/version.txt'))
-                : 'dev';
-            ?>
   <p class="version intro">
-    Version: <?= htmlspecialchars($version) ?>
+    Version: <span id="app-version">dev</span>
   </p>
 </footer>
 <script src="app.js" defer></script>
