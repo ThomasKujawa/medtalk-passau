@@ -43,7 +43,7 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
-  font-family: var(--font-body);
+  font-family: var(--font-body), serif;
   background: radial-gradient(circle at top, #ffffff 0, var(--color-bg) 60%, #e8ecef 100%);
   color: var(--color-text);
 }
@@ -387,12 +387,12 @@ img {
 }
 
 /* Einzelne „Slices“ im 4x2-Raster */
-.icon-0 { background-position:   0%   0%; }
-.icon-1 { background-position:  33.3% 0%; }
-.icon-2 { background-position:  66.6% 0%; }
-.icon-3 { background-position: 100%  0%; }
+.icon-0 { background-position:   0 0; }
+.icon-1 { background-position:  33.3% 0; }
+.icon-2 { background-position:  66.6% 0; }
+.icon-3 { background-position: 100%  0; }
 
-.icon-4 { background-position:   0%  100%; }
+.icon-4 { background-position:   0  100%; }
 .icon-5 { background-position:  33.3% 100%; }
 .icon-6 { background-position:  66.6% 100%; }
 .icon-7 { background-position: 100% 100%; }
@@ -472,4 +472,17 @@ img {
     margin-inline: var(--space-3);
     padding-inline: var(--space-4);
   }
+}
+
+.info-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.info-list li {
+  font-size: 0.95rem;
+  line-height: 1.6;
 }

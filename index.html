@@ -10,6 +10,64 @@
 <header class="site-header">
   <div class="site-title">Simulation Patienten-Arzt-Gespräch</div>
   <p class="site-subtitle">Fachsprachentraining für Ärzte</p>
+  <!-- Anleitung-Button -->
+  <button
+          class="info-button"
+          type="button"
+          aria-label="Anleitung anzeigen"
+          data-open-info
+  >
+    ?
+  </button>
+
+  <!-- Anleitung-Modal -->
+  <div
+          id="info-modal"
+          class="modal"
+          aria-hidden="true"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="info-modal-title"
+  >
+    <div class="modal-backdrop" data-close-info></div>
+    <div class="modal-dialog" role="document">
+      <button
+              class="modal-close"
+              type="button"
+              data-close-info
+              aria-label="Anleitung schließen"
+      >
+        ×
+      </button>
+      <div class="modal-body">
+        <div class="modal-content">
+          <h2 id="info-modal-title" class="modal-author">So funktioniert das Training</h2>
+
+          <p class="modal-text">
+            Vor dem Training stellt sich das Prüfungsgremium vor.
+            Dann stellen auch Sie sich kurz vor und berichten über Ihr Studium oder Ihren bisherigen Berufsweg.
+          </p>
+
+          <p class="modal-text" style="margin-top: 1rem; font-weight: 600;">Das Gespräch hat drei Teile. Hier simulieren Sie den Teil 1.</p>
+
+          <ul class="info-list">
+            <li>
+              <strong>Arzt-Patienten-Gespräch (20 Minuten)</strong><br>
+              Führen Sie ein Gespräch mit einem Patienten (eine andere Person spielt den Patienten).
+              Fragen Sie nach den aktuellen Beschwerden, den Vorerkrankungen, den Medikamenten und der Familiengeschichte.
+              Teilen Sie dem Patienten Ihre Verdachtsdiagnose mit und erklären Sie die nächsten Schritte.
+              Sprechen Sie so, dass der Patient Sie gut versteht – vermeiden Sie Fachbegriffe.
+              Sie dürfen sich Notizen machen.
+            </li>
+          </ul>
+
+          <p class="modal-text" style="margin-top: 1rem; font-style: italic;">
+            Hinweis: Bewertet werden nur die sprachlichen Leistungen.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
 </header>
 
 <main class="site-main">

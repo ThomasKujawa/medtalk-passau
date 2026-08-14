@@ -618,3 +618,29 @@ window.addEventListener("DOMContentLoaded", () => {
   initPlayfield();
   initModal();
 });
+
+// Anleitung-Modal
+document.addEventListener('DOMContentLoaded', () => {
+  const infoModal = document.getElementById('info-modal');
+  if (!infoModal) return;
+
+  document.querySelector('[data-open-info]')
+      ?.addEventListener('click', () => {
+        infoModal.classList.add('is-open');
+        infoModal.setAttribute('aria-hidden', 'false');
+      });
+
+  infoModal.addEventListener('click', (e) => {
+    if (e.target.hasAttribute('data-close-info')) {
+      infoModal.classList.remove('is-open');
+      infoModal.setAttribute('aria-hidden', 'true');
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && infoModal.classList.contains('is-open')) {
+      infoModal.classList.remove('is-open');
+      infoModal.setAttribute('aria-hidden', 'true');
+    }
+  });
+});
