@@ -1,139 +1,94 @@
-# Dynamischer Inhaltskalender
+# MedTalk Passau
 
-Eine interaktive, adventkalender-ähnliche Website, die dynamisch zugeordnete Inhalte (Autor, Text, Link, Bild) hinter zufällig platzierten, gepaarten Zahlenschaltflächen (Hell-/Dunkel-Varianten) anzeigt.
+MedTalk Passau ist eine browserbasierte Trainingsanwendung zur Vorbereitung auf das **Arzt-Patienten-Gespräch** im Rahmen der medizinischen Fachsprachprüfung.
 
-## 📋 Überblick
+Die Anwendung unterstützt Ärztinnen und Ärzte mit internationalem Abschluss dabei, typische Gesprächssituationen zu üben: von der strukturierten Anamnese über verständliche Rückfragen bis zur Erklärung einer Verdachtsdiagnose und der nächsten Schritte.
 
-Der Dynamische Inhaltskalender ist eine moderne Web-Anwendung, die Inhalte in einem interaktiven Kartenformat präsentiert. Benutzer können Zahlenschaltflächen anklicken, um Inhalte aufzudecken, ähnlich wie bei einem Adventskalender. Das Projekt unterstützt zwei Design-Varianten (Hell und Dunkel) und mischt die Inhalte bei jedem Seitenaufruf neu.
+Die Anwendung ist unter [medtalk-passau.de](https://medtalk-passau.de) erreichbar.
 
-## ✨ Hauptfunktionen
+## Ziel des Trainings
 
-- **Interaktive Zahlenschaltflächen**: Gepaarte Schaltflächen mit Hell- und Dunkel-Varianten
-- **Dynamische Inhaltsanzeige**: Zeigt Autor, Text, Link und Bild für jeden Inhaltselement
-- **Zufälliges Mischen**: Die Reihenfolge der Inhalte wird bei jedem Neuladen randomisiert
-- **Responsive Design**: Funktioniert auf Desktop-, Tablet- und Mobilgeräten
-- **Hell/Dunkel-Modus**: Umschaltbare Design-Varianten für bessere Benutzererfahrung
-- **Einfache Konfiguration**: Inhalte können leicht in der JavaScript-Datei konfiguriert werden
+Im Prüfungsteil „Arzt-Patienten-Gespräch“ führen Prüflinge ein etwa 20-minütiges Gespräch mit einer Person, die einen Patienten oder eine Patientin spielt.
 
-## 📁 Projektstruktur
+Dabei geht es insbesondere darum,
 
-```
-dynamic-content-calendar/
-├── index.html       # HTML-Struktur der Anwendung
-├── style.css        # CSS-Styling für beide Design-Varianten
-├── app.js           # Hauptlogik und Inhaltsmanagement
-└── README.md        # Diese Datei
-```
+- aktuelle Beschwerden strukturiert zu erfragen,
+- Vorerkrankungen, Medikamente und die Familienanamnese zu berücksichtigen,
+- eine Verdachtsdiagnose verständlich zu erklären,
+- das weitere Vorgehen nachvollziehbar zu beschreiben,
+- medizinische Fachsprache in allgemein verständliche Sprache zu übersetzen.
 
-## 🚀 Installation & Verwendung
+Bewertet werden dabei vor allem die **sprachlichen Leistungen**: verständliche Kommunikation, angemessene Fragen, ein klarer Gesprächsaufbau und der sichere Umgang mit typischen Situationen im medizinischen Alltag.
 
-### Schnellstart
+## Was MedTalk Passau bietet
 
-1. **Repository klonen:**
-   ```bash
-git clone https://github.com/ThomasKujawa/dynamic-content-calendar.git
-cd dynamic-content-calendar
-```
+MedTalk Passau stellt Fallbeispiele und Gesprächsimpulse für das eigenständige oder gemeinsame Training bereit.
 
-2. **Datei öffnen:**
-   - Öffnen Sie `index.html` direkt in Ihrem Browser, oder
-   - Verwenden Sie einen lokalen Web-Server (z.B. Live Server in VS Code)
+Die Anwendung hilft dabei,
 
-### Abhängigkeiten
+- medizinische Anamnesegespräche realitätsnah zu üben,
+- typische Fragen in einfacher, patientengerechter Sprache zu formulieren,
+- Gesprächsabläufe zu strukturieren,
+- passende Formulierungen für Diagnose, Untersuchung und Behandlung zu trainieren,
+- sich gezielt auf die Anforderungen der Fachsprachprüfung vorzubereiten.
 
-Dieses Projekt benötigt keine externen npm-Pakete. Es verwendet nur:
-- HTML5
-- CSS3
-- Vanilla JavaScript (ES6+)
+Die Fälle können beispielsweise zu zweit genutzt werden: Eine Person übernimmt die Rolle der Ärztin oder des Arztes, die andere spielt anhand der Fallinformationen den Patienten oder die Patientin.
 
-## 🔧 Inhalte hinzufügen/konfigurieren
+## Ablauf eines Trainings
 
-Die Inhalte werden in der `app.js` Datei definiert. Öffnen Sie diese Datei und suchen Sie nach dem `items`-Array:
+Ein typisches Training kann so aussehen:
 
-```javascript
-const items = [
-    {
-        author: 'Autor 1',
-        text: 'Inhalt hier...',
-        link: 'https://beispiel.de',
-        image: 'https://beispiel.de/bild.jpg'
-    },
-    {
-        author: 'Autor 2',
-        text: 'Mehr Inhalt...',
-        link: 'https://beispiel2.de',
-        image: 'https://beispiel2.de/bild2.jpg'
-    }
-    // Weitere Items hinzufügen...
-];
-```
+1. Das Prüfungsgremium und die prüfende Person stellen sich kurz vor.
+2. Der Prüfling berichtet kurz über Studium oder bisherigen Berufsweg.
+3. Anschließend beginnt das simulierte Arzt-Patienten-Gespräch.
+4. Der Prüfling erhebt die Anamnese und fragt nach Beschwerden, Vorerkrankungen, Medikamenten und familiären Erkrankungen.
+5. Zum Schluss erläutert der Prüfling eine mögliche Verdachtsdiagnose und das weitere Vorgehen in verständlicher Sprache.
 
-Fügen Sie neue Objekte zum Array hinzu, um neue Inhalte zu erstellen. Jedes Objekt sollte folgende Eigenschaften haben:
-- `author`: Name des Autors/Erstellers
-- `text`: Der Haupttext/Beschreibung
-- `link`: URL zu einer externen Ressource (optional)
-- `image`: URL zum Bild (optional)
+Notizen sind während des Gesprächs erlaubt. Entscheidend ist nicht die fachmedizinische Detailtiefe, sondern eine klare, strukturierte und patientengerechte Kommunikation.
 
-## 🎨 Design-Varianten
+## Technik
 
-Das Projekt unterstützt zwei CSS-Varianten:
+Das Projekt ist bewusst einfach gehalten und besteht aus einer statischen Website:
 
-### Hell-Modus
-- Helle Hintergrundfarben
-- Dunkler Text
-- Sanfte Farbpalette
+- `index.html` enthält die Startseite und die grundlegende Oberfläche.
+- `app.js` steuert die interaktiven Funktionen der Anwendung.
+- `style.css` enthält das Layout und die Gestaltung.
+- `case/` enthält die Trainingsfälle beziehungsweise deren Inhalte.
+- `images/` enthält verwendete Grafiken und Bilddateien.
 
-### Dunkel-Modus
-- Dunkle Hintergrundfarben
-- Heller Text
-- Kräftige Farbakzente
+Für die Nutzung ist kein Build-Prozess und kein serverseitiges Framework erforderlich. Die Anwendung kann direkt über einen Webserver ausgeliefert oder lokal im Browser geöffnet werden.
 
-Die Umschaltung erfolgt über entsprechende CSS-Klassen in der `style.css`.
+## Lokale Nutzung
 
-## 🔀 Zufälliges Mischen
+Repository klonen:
 
-Bei jedem Seitenaufruf werden die Inhalte automatisch in zufälliger Reihenfolge angeordnet. Dies wird durch eine Fisher-Yates-Shuffle-Implementierung erreicht:
-
-```javascript
-function shuffleArray(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-    }
-    return array;
-}
+```bash
+git clone [https://github.com/ThomasKujawa/medtalk-passau.git](https://github.com/ThomasKujawa/medtalk-passau.git)
+cd medtalk-passau
 ```
 
-## 📱 Browser-Unterstützung
+Anschließend kann die Datei `index.html` im Browser geöffnet werden.
 
-- Chrome/Edge (neueste Versionen)
-- Firefox (neueste Versionen)
-- Safari (neueste Versionen)
-- Mobile Browser (iOS Safari, Chrome Mobile)
+Für eine realistischere lokale Umgebung empfiehlt sich ein einfacher Entwicklungsserver, zum Beispiel mit Python:
 
-## 🤝 Beiträge
+```bash
+python3 -m http.server 8000
+```
 
-Beiträge sind willkommen! Wenn Sie Verbesserungen oder neue Features vorschlagen möchten:
+Danach ist die Anwendung unter `http://localhost:8000` erreichbar.
 
-1. Forken Sie das Repository
-2. Erstellen Sie einen Feature-Branch (`git checkout -b feature/AmazingFeature`)
-3. Commiten Sie Ihre Änderungen (`git commit -m 'Add some AmazingFeature'`)
-4. Pushen Sie zum Branch (`git push origin feature/AmazingFeature`)
-5. Öffnen Sie einen Pull Request
+## Mitwirken
 
-## 📝 Lizenz
+Beiträge zur Verbesserung der Anwendung sind willkommen – besonders:
 
-Dieses Projekt ist unter der GPL 3.0-Lizenz lizenziert. Weitere Informationen finden Sie in der [LICENSE](LICENSE)-Datei.
+- neue oder überarbeitete Gesprächsfälle,
+- sprachlich verständlichere Formulierungen,
+- Hinweise zu typischen Prüfungssituationen,
+- Verbesserungen bei Barrierefreiheit und Bedienung,
+- Fehlerkorrekturen und technische Optimierungen.
 
-## 👤 Autor
+Bitte beschreibe bei Änderungen möglichst kurz, welchen konkreten Nutzen sie für das Training haben.
 
-**Thomas Kujawa**
-- GitHub: [@ThomasKujawa](https://github.com/ThomasKujawa)
+## Lizenz
 
-## 💬 Support & Feedback
-
-Wenn Sie Fragen haben oder Feedback geben möchten, eröffnen Sie bitte ein [Issue](https://github.com/ThomasKujawa/dynamic-content-calendar/issues) im Repository.
-
----
-
-**Zuletzt aktualisiert**: 14.03.2026
+Die Lizenzbedingungen sind in der Datei [LICENSE](LICENSE) hinterlegt.
